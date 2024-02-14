@@ -1,0 +1,17 @@
+@tailwind utilities;
+
+@layer utilities {
+  .card-border {
+    border: 1px solid #626266;
+    border-radius: 0.5rem;
+  }
+
+  .card-bg {
+    background-color: #1f1f22;
+  }
+
+  .card-hover {
+    border: 1px solid #303032;
+    background-color: #303032;
+  }
+}

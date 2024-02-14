@@ -33,6 +33,7 @@ module.exports = {
     'prettier/prettier': ['error', { endOfLine: 'auto' }],
     semi: ['error', 'never'],
     'react/react-in-jsx-scope': 'off',
+    'react/require-default-props': 'off',
     'import/order': [
       'error',
       {

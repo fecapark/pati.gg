@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import './card.css';
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+}
+
+body {
+  color: white;
+  font-size: 16px;
+  background-color: #1f2123;
+}
+
+@layer utilities {
+  .flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
