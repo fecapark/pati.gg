@@ -10,7 +10,7 @@ const getBrowserToolsForCrawl = async (url: string) => {
     args: [...chromium.args, '--hide-scrollbars', '--disable-web-security'],
     defaultViewport: chromium.defaultViewport,
     executablePath: await chromium.executablePath(),
-    headless: 'shell',
+    headless: false,
     ignoreHTTPSErrors: true,
   })
   console.log('wow2')

@@ -11,8 +11,8 @@ const TanstackProvider = ({ children }: React.PropsWithChildren) => {
       new QueryClient({
         defaultOptions: {
           queries: {
-            // staleTime: 1000 * 60 * 60, // 1시간
-            // gcTime: 1000 * 60 * 60, // 1시간
+            staleTime: 1000 * 15, // 15초
+            gcTime: 1000 * 15, // 15초
           },
         },
       })
