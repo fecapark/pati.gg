@@ -13,8 +13,6 @@ const authOptions: AuthOptions = {
           ? `https://cdn.discordapp.com/avatars/${profile.id}/${profile.avatar}.webp?size=80`
           : null
 
-        console.log(profile.id)
-
         return {
           id: profile.id,
           name: profile.global_name ?? profile.username,
