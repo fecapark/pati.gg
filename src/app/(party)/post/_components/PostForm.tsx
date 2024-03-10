@@ -88,13 +88,13 @@ const PostForm = ({ session }: PostFormProps) => {
       inProgress: true,
       positions: makePositionMap(),
     })
+    router.push(`/party/${id}`)
+    setIsPosting(false)
+    await setUserPostedNow(session.user.id)
     setUserData((prev) => {
       if (!prev) return prev
       return { ...prev, postedAt: new Date() }
     })
-    router.push(`/party/${id}`)
-    setIsPosting(false)
-    await setUserPostedNow(session.user.id)
   }
 
   return (

@@ -15,8 +15,6 @@ import { setExtraUserData } from '@/server/user/user'
 import { isFunnelCanGoNextAtom, userDataAtom } from '@/shared/atom'
 import { jobOptions } from '@/shared/const'
 
-import TagAuthInput from './TagAuthInput'
-
 interface ProfileFunnelProps {
   session: Session | null
 }
@@ -26,7 +24,29 @@ const UserTagForm = ({
 }: {
   setMapleWorldData: Dispatch<SetStateAction<{ tag: string; name: string }>>
 }) => {
+  const [tag, setTag] = useState('')
+  const [name, setName] = useState('')
   const setIsFunnelCanGoNext = useSetRecoilState(isFunnelCanGoNextAtom)
+
+  const isNameValid = name.length >= 2 && name.length <= 16
+  const isTagValid = tag.length >= 4 && tag.length <= 6
+
+  const onTagChange = (e: React.ChangeEvent) => {
+    setTag((e.target as HTMLInputElement).value.trim().replaceAll('#', ''))
+  }
+
+  const onNameChange = (e: React.ChangeEvent) => {
+    setName((e.target as HTMLInputElement).value.trim())
+  }
+
+  useEffect(() => {
+    if (isNameValid && isTagValid) {
+      setMapleWorldData({ tag, name })
+      setIsFunnelCanGoNext(true)
+    } else {
+      setIsFunnelCanGoNext(false)
+    }
+  }, [tag, name, isNameValid, isTagValid, setMapleWorldData, setIsFunnelCanGoNext])
 
   return (
     <div>
@@ -45,10 +65,34 @@ const UserTagForm = ({
             의 계정 프로필에서 확인할 수 있어요.
           </span>
         </div>
-        <TagAuthInput
+        <div className="flex flex-col gap-1 w-full mb-10">
+          <span className="text-[15px] font-medium text-[#d2d2d6] mb-1">
+            메이플월드 유저 태그 (# 제외) *
+          </span>
+          <input
+            type="text"
+            value={tag}
+            onChange={onTagChange}
+            className={`w-full pb-1 pl-1 font-medium bg-transparent border-b-2 ${isTagValid ? 'border-accent-blue' : 'border-[#323238]'} focus:border-accent-blue`}
+            style={{ transition: 'border-color 0.15s cubic-bezier(0.2, 0, 0, 1)' }}
+          />
+        </div>
+        <div className="flex flex-col gap-1 w-full mb-10">
+          <span className="text-[15px] font-medium text-[#d2d2d6] mb-1">
+            메이플월드 유저 닉네임*
+          </span>
+          <input
+            type="text"
+            value={name}
+            onChange={onNameChange}
+            className={`w-full pb-1 pl-1 font-medium bg-transparent border-b-2 ${isNameValid ? 'border-accent-blue' : 'border-[#323238]'} focus:border-accent-blue`}
+            style={{ transition: 'border-color 0.15s cubic-bezier(0.2, 0, 0, 1)' }}
+          />
+        </div>
+        {/* <TagAuthInput
           setMapleWorldData={setMapleWorldData}
           setIsAuthenticated={setIsFunnelCanGoNext}
-        />
+        /> */}
       </div>
     </div>
   )
