@@ -1,0 +1,17 @@
+.party-menu {
+  border: 1px solid #626266;
+  border-radius: 0.5rem;
+  background-color: #1f1f22;
+}
+
+.menu-item {
+  font-size: 15px;
+  background-color: transparent;
+  color: #e0e3e5;
+}
+
+.menu-item-hover {
+  font-size: 15px;
+  color: #e0e3e5;
+  background-color: #303032;
+}

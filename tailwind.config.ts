@@ -1,20 +1,24 @@
-import type { Config } from "tailwindcss";
+import TailwindScrollbarPlugin from 'tailwind-scrollbar'
+import type { Config } from 'tailwindcss'
 
 const config: Config = {
   content: [
-    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/components/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      colors: {
+        'accent-blue': '#2d7ceb',
+        'accent-green': '#0f9d58',
+        'accent-red': '#ef867b',
+        'discord-primary': '#5865f2',
+        'skeleton-primary': '#323236',
+        'separator-primary': '#424548',
       },
     },
   },
-  plugins: [],
-};
-export default config;
+  plugins: [TailwindScrollbarPlugin({ nocompatible: true })],
+}
+export default config

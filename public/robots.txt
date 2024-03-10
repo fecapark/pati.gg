@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://www.pati.gg
+
+# Sitemaps
+Sitemap: https://www.pati.gg/sitemap.xml
