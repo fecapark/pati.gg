@@ -1,10 +1,19 @@
+import chromium from '@sparticuz/chromium'
 import { NextRequest, NextResponse } from 'next/server'
-import puppeteer, { Page } from 'puppeteer'
+import puppeteer, { Page } from 'puppeteer-core'
 
 import { TagResponseData } from '@/types/tag'
 
 const getBrowserToolsForCrawl = async (url: string) => {
-  const browser = await puppeteer.launch({ headless: 'shell' })
+  console.log('wow')
+  const browser = await puppeteer.launch({
+    args: [...chromium.args, '--hide-scrollbars', '--disable-web-security'],
+    defaultViewport: chromium.defaultViewport,
+    executablePath: await chromium.executablePath(),
+    headless: 'shell',
+    ignoreHTTPSErrors: true,
+  })
+  console.log('wow2')
   const page = await browser.newPage()
   page.setUserAgent(
     'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36'

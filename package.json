@@ -13,6 +13,7 @@
     "jackspeak": "2.1.1"
   },
   "dependencies": {
+    "@sparticuz/chromium": "^122.0.0",
     "@szhsin/react-menu": "^4.1.0",
     "@tanstack/react-query": "^5.20.5",
     "@tanstack/react-query-devtools": "^5.20.5",
@@ -25,7 +26,7 @@
     "next": "14.1.0",
     "next-auth": "^4.24.6",
     "next-sitemap": "^4.2.3",
-    "puppeteer": "^22.0.0",
+    "puppeteer-core": "^22.4.1",
     "react": "^18",
     "react-dom": "^18",
     "react-dropdown-select": "^4.11.1",
