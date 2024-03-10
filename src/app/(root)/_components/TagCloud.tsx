@@ -37,34 +37,13 @@ const LocatedSection = ({
 
 const TagCloud = () => {
   const sectionNames = [
-    [
-      '엘리니아',
-      'https://i.namu.wiki/i/C-1YQOMDVcJyyjUk6PrlpnlOgk1zDAR4KBjT3c7_ptxxxGXsb8dp2OdoFwUmZNcUBMC1qpLHK6SEWpMzyLrWEw.png',
-    ],
-    [
-      '페리온',
-      'https://i.namu.wiki/i/zdULztpeC4GezDtL25o6aHXf4GtfxH7Aj-Evm4zxPwITzJROddEGe1CEP71DO0Q-GM3UV1Va9uMqeBEXuYU5eA.png',
-    ],
-    [
-      '커닝시티',
-      'https://i.namu.wiki/i/bNZ6lWom-k5KenpRRYbnjzJQNJ8NgKbWoF-90jllk8dlzGD5qpGczRFGM_-0zFddrwcSDnsTbbT9O8LY4tod1A.webp',
-    ],
-    [
-      '슬리피우드',
-      'https://i.namu.wiki/i/-bPu3RvRP7g-Fvdblm-6aWoAgLEyZpGUVbKVLOE60QfHZU0RzM0X3UKX36rEfDVlkzPIf7JGvHdbhIl0lWb8Mg.webp',
-    ],
-    [
-      '플로리나비치',
-      'https://i.namu.wiki/i/PRFd-Ms-g-i0vBZkh1DHhDhVPoA7A4YJ1CGqk7uqReKw3TRg5vErxSCjpmPFTgUW0IuSUWGj4XDwzfZulqJIIw.png',
-    ],
-    [
-      '오르비스',
-      'https://i.namu.wiki/i/aZU74JBpdRJBuceuMarZT21a486EnPStjutXOhZMQZsiXFOVgpIQ9I4ydrEKx5pmTv_LZcuWbA164o2dX3mSAA.png',
-    ],
-    [
-      '엘나스',
-      'https://i.namu.wiki/i/aXV7iYyDeku9AExXoMZe8Vo3RLfd2aJn-BcfnOzZiSkl1o3ZDpgp2qDmg_8fHapbF9mGxzytM-7Zg8kyVsHvJQ.png',
-    ],
+    ['엘리니아', '/imgs/ellinia.png'],
+    ['페리온', '/imgs/perion.png'],
+    ['커닝시티', '/imgs/kerningcity.webp'],
+    ['슬리피우드', '/imgs/sleepywood.webp'],
+    ['플로리나비치', '/imgs/florina.png'],
+    ['오르비스', '/imgs/orbis.png'],
+    ['엘나스', '/imgs/elnas.png'],
   ]
 
   return (

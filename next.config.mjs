@@ -10,10 +10,6 @@ const nextConfig = {
         protocol: 'https',
         hostname: 'discord.com',
       },
-      {
-        protocol: 'https',
-        hostname: 'i.namu.wiki',
-      },
     ],
   },
 }
