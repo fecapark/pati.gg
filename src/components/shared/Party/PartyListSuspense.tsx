@@ -5,7 +5,7 @@ import Link from 'next/link'
 import PartySkeleton from './PartySkeleton'
 
 interface PartyListSuspenseProps {
-  title: string
+  title: React.ReactNode
   moreHref?: string
   wrapperClassName?: string
   children: React.ReactNode
