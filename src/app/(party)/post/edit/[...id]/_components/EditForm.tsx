@@ -68,8 +68,6 @@ const EditForm = ({ placeholder, session }: EditFormProps) => {
     setIsPosting(false)
   }
 
-  console.log('wow')
-
   return (
     <>
       <div className="mb-5">
