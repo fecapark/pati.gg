@@ -18,7 +18,8 @@ const useTagAuth = () => {
   const requestTagAuth = async (tag: string) => {
     try {
       setIsLoading(true)
-      const { data: res } = await axios<TagResponseData>(`/api/tagauth?tag=${tag}`)
+      const { data: res, statusText } = await axios<TagResponseData>(`/api/tagauth?tag=${tag}`)
+      console.log(statusText)
       setIsAuthed(!!res.success)
       setData(res)
     } catch (error) {
