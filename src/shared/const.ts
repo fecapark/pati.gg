@@ -174,6 +174,35 @@ const tags: TagCollection = {
       color: '#283D5F',
     },
     {
+      name: '신전의입구1',
+      section: '사냥터',
+      keywords: ['신전의입구', '신전의입구1', '입구', '입구1'],
+      location: '슬리피우드',
+      color: '#283D5F',
+    },
+    {
+      name: '신전의입구2',
+      section: '사냥터',
+      keywords: ['신전의입구', '신전의입구2', '입구', '입구2'],
+      location: '슬리피우드',
+      color: '#283D5F',
+    },
+    {
+      name: '신전의입구3',
+      section: '사냥터',
+      keywords: ['신전의입구', '신전의입구3', '입구', '입구3'],
+      location: '슬리피우드',
+      color: '#283D5F',
+    },
+    {
+      name: '신전의입구4',
+      section: '사냥터',
+      keywords: ['신전의입구', '신전의입구4', '입구', '입구4'],
+      location: '슬리피우드',
+      color: '#283D5F',
+    },
+
+    {
       name: '따모',
       section: '사냥터',
       keywords: ['따모', '따모팟', '따뜻한모래밭', '따듯한모래밭', '모래밭'],
