@@ -224,6 +224,13 @@ const tags: TagCollection = {
       color: '#5B2E42',
     },
     {
+      name: '산책로',
+      section: '사냥터',
+      keywords: ['산책로', '스카이로드'],
+      location: '오르비스',
+      color: '#5B2E42',
+    },
+    {
       name: '얼골',
       section: '사냥터',
       keywords: ['얼음골짜기', '얼골', '얼골팟'],
