@@ -118,9 +118,16 @@ const tags: TagCollection = {
       color: '#7A592A',
     },
     {
-      name: '불타버린땅',
+      name: '불타버린땅1',
       section: '사냥터',
-      keywords: ['파보땅', '파이어보어의땅', '파이어보어땅'],
+      keywords: ['불타버린땅', '불땅', '파보땅', '파이어보어의땅', '파이어보어땅'],
+      location: '페리온',
+      color: '#7A592A',
+    },
+    {
+      name: '불타버린땅2',
+      section: '사냥터',
+      keywords: ['불타버린땅', '불땅', '파보땅', '파이어보어의땅', '파이어보어땅'],
       location: '페리온',
       color: '#7A592A',
     },
