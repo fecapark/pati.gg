@@ -1,6 +1,7 @@
 import '@/styles/globals.css'
 import type { Metadata } from 'next'
 import localFont from 'next/font/local'
+import Script from 'next/script'
 
 import Footer from '@/components/layouts/Footer/Footer'
 import Header from '@/components/layouts/Header/Header'
@@ -36,6 +37,26 @@ export const metadata: Metadata = {
   description: '메이플랜드 Mapleland 에서 같이 활동할 파티원들을 찾아보세요.',
 }
 
+const GAScript = () => {
+  return (
+    <>
+      <Script async src="https://www.googletagmanager.com/gtag/js?id=G-NN7NZZ63QY" />
+      <Script
+        id="gtag-init"
+        dangerouslySetInnerHTML={{
+          __html: `
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'G-NN7NZZ63QY');
+          `,
+        }}
+      />
+    </>
+  )
+}
+
 const RootLayout = ({
   children,
 }: Readonly<{
@@ -50,6 +71,7 @@ const RootLayout = ({
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
         <link rel="manifest" href="/site.webmanifest" />
+        <GAScript />
       </head>
       <body className={`${Pretendard.className}`}>
         <TanstackProvider>
