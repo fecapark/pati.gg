@@ -16,8 +16,8 @@ const NoticeContainer = ({ hidden }: { hidden: boolean }) => {
             </IconWrapper>
             <div>
               <div className="w-full text-[#d2d2d5] text-sm">
-                [공지] 모바일 대응은 추후 제공될 예정입니다. 원활한 서비스 사용을 위해 PC에서
-                이용해주세요.
+                [공지] 파티글 작성 이벤트 추첨 결과는 3월 31일에 발표됩니다. 또한 당첨자들에게는
+                개별 연락 드릴 예정이니 참고 부탁드립니다.
               </div>
             </div>
           </div>

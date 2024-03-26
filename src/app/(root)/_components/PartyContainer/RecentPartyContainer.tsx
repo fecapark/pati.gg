@@ -31,8 +31,11 @@ const RecentPartyContainer = () => {
               <a className="event-tooltip text-base bg-accent-blue rounded-md px-2">EVENT</a>
               <div className="text-base font-medium">
                 <Tooltip anchorSelect=".event-tooltip" place="top">
-                  24년 3월 25일까지 파티글 작성 시, 추첨 30명에게 스벅 기프티콘을 드립니다 (추첨 시
-                  별도 공지 예정). <br />
+                  [종료]{' '}
+                  <span className="line-through">
+                    24년 3월 25일까지 파티글 작성 시, 추첨 30명에게 스벅 기프티콘을 드립니다.
+                  </span>
+                  <br />
                 </Tooltip>
               </div>
             </div>
