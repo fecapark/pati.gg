@@ -3,7 +3,6 @@
 import 'react-tooltip/dist/react-tooltip.css'
 
 import { useSuspenseQuery } from '@tanstack/react-query'
-import { Tooltip } from 'react-tooltip'
 
 import { getRecentParties } from '@/server/party/party'
 
@@ -27,18 +26,6 @@ const RecentPartyContainer = () => {
         title={
           <div className="flex gap-3 items-center">
             <span>최신 파티글</span>
-            <div className="flex-center">
-              <a className="event-tooltip text-base bg-accent-blue rounded-md px-2">EVENT</a>
-              <div className="text-base font-medium">
-                <Tooltip anchorSelect=".event-tooltip" place="top">
-                  [종료]{' '}
-                  <span className="line-through">
-                    24년 3월 25일까지 파티글 작성 시, 추첨 30명에게 스벅 기프티콘을 드립니다.
-                  </span>
-                  <br />
-                </Tooltip>
-              </div>
-            </div>
           </div>
         }
         maxChildrenCount={6}

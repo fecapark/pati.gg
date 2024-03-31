@@ -2,6 +2,7 @@ import { HiSpeakerphone } from 'react-icons/hi'
 
 import PartyContainer from '@/app/(root)/_components/PartyContainer/PartyContainer'
 import IconWrapper from '@/components/utils/IconWrapper/IconWrapper'
+import NewWindowLink from '@/components/utils/NewWindowLink/NewWindowLink'
 
 const NoticeContainer = ({ hidden }: { hidden: boolean }) => {
   if (hidden) return null
@@ -16,8 +17,10 @@ const NoticeContainer = ({ hidden }: { hidden: boolean }) => {
             </IconWrapper>
             <div>
               <div className="w-full text-[#d2d2d5] text-sm">
-                [공지] 파티글 작성 이벤트 추첨 결과는 3월 31일에 발표됩니다. 또한 당첨자들에게는
-                개별 연락 드릴 예정이니 참고 부탁드립니다.
+                [공지] 파티글 작성 이벤트 당첨자 발표{' '}
+                <NewWindowLink href="https://github.com/fecastudioss/patigg-event-result">
+                  [확인하기]
+                </NewWindowLink>
               </div>
             </div>
           </div>
